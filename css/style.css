@@ -1772,3 +1772,278 @@ body {
     }
 
 }
+
+/* =========================================
+   PRALINE TRAVELERS
+   OUR FLEET SECTION
+========================================= */
+
+.fleet {
+    width: 100%;
+    padding: 100px 8%;
+    background: #F4F0E8;
+}
+
+.fleet-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fleet-heading {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.fleet-subtitle {
+    display: inline-block;
+    color: #B49A73;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.fleet-heading h2 {
+    color: #183C35;
+    font-size: clamp(32px, 4vw, 46px);
+    margin-bottom: 18px;
+}
+
+.fleet-heading h2 span {
+    color: #B49A73;
+}
+
+.fleet-heading p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* VEHICLE GRID */
+
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+.fleet-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(24, 60, 53, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.fleet-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(24, 60, 53, 0.15);
+}
+
+
+/* VEHICLE IMAGE */
+
+.fleet-image {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+
+.fleet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.fleet-card:hover .fleet-image img {
+    transform: scale(1.06);
+}
+
+.fleet-tag {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #D6C3A5;
+    color: #183C35;
+    padding: 9px 14px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* VEHICLE DETAILS */
+
+.fleet-content {
+    padding: 28px;
+}
+
+.fleet-category {
+    color: #B49A73;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.fleet-content h3 {
+    color: #183C35;
+    font-size: 27px;
+    margin: 12px 0;
+}
+
+.fleet-content > p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+
+/* VEHICLE FEATURES */
+
+.fleet-specs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.fleet-specs span {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: #555;
+    font-size: 12px;
+}
+
+.fleet-specs i {
+    color: #B49A73;
+    font-size: 15px;
+}
+
+
+/* BOOKING BUTTON */
+
+.fleet-book-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #183C35;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    margin-top: 22px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.fleet-book-btn:hover {
+    background: #B49A73;
+    color: #183C35;
+}
+
+
+/* BOTTOM FEATURES */
+
+.fleet-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 55px;
+    padding: 30px;
+    background: #183C35;
+    border-radius: 12px;
+}
+
+.fleet-feature {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.fleet-feature > i {
+    color: #D6C3A5;
+    font-size: 25px;
+}
+
+.fleet-feature h4 {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.fleet-feature p {
+    color: #d5dedb;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .fleet {
+        padding: 80px 5%;
+    }
+
+    .fleet-grid {
+        gap: 20px;
+    }
+
+    .fleet-image {
+        height: 230px;
+    }
+
+    .fleet-content {
+        padding: 22px;
+    }
+
+    .fleet-bottom {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .fleet {
+        padding: 65px 5%;
+    }
+
+    .fleet-heading {
+        margin-bottom: 35px;
+    }
+
+    .fleet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fleet-image {
+        height: 240px;
+    }
+
+    .fleet-content h3 {
+        font-size: 24px;
+    }
+
+    .fleet-specs {
+        gap: 13px 8px;
+    }
+
+    .fleet-bottom {
+        margin-top: 35px;
+        padding: 25px 20px;
+    }
+
+}
