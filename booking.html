@@ -8,18 +8,31 @@
 
     <title>Book a Seat | Praline Travelers</title>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
     <!-- Booking page stylesheet -->
     <link rel="stylesheet" href="./css/booking.css">
 
     <!-- Font Awesome icons -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
 
     <!-- Booking JavaScript -->
     <script src="./js/booking.js" defer></script>
+
 </head>
 
 <body>
+
 
     <!-- =================================
          HEADER
@@ -28,16 +41,24 @@
     <header class="booking-header">
 
         <a href="index.html" class="booking-logo">
+
             <span>PRALINE</span>
+
             <small>TRAVELERS</small>
+
         </a>
 
+
         <a href="index.html" class="back-home">
+
             <i class="fa-solid fa-arrow-left"></i>
+
             Back to Home
+
         </a>
 
     </header>
+
 
 
     <!-- =================================
@@ -52,7 +73,10 @@
 
             <span>TRAVEL WITH CONFIDENCE</span>
 
-            <h1>Your Journey.<br>Your Seat. Your Way.</h1>
+            <h1>
+                Your Journey.<br>
+                Your Seat. Your Way.
+            </h1>
 
             <p>
                 Reserve your seat with Praline Travelers
@@ -65,6 +89,7 @@
     </section>
 
 
+
     <!-- =================================
          BOOKING SECTION
     ================================== -->
@@ -74,7 +99,9 @@
         <div class="booking-container">
 
 
-            <!-- LEFT INFORMATION PANEL -->
+            <!-- =================================
+                 LEFT INFORMATION PANEL
+            ================================== -->
 
             <aside class="booking-sidebar">
 
@@ -91,63 +118,98 @@
                 </p>
 
 
+                <!-- WIFI -->
+
                 <div class="booking-benefit">
 
                     <i class="fa-solid fa-wifi"></i>
 
                     <div>
+
                         <h3>Onboard Wi-Fi</h3>
-                        <p>Stay connected during your journey.</p>
+
+                        <p>
+                            Stay connected during your journey.
+                        </p>
+
                     </div>
 
                 </div>
 
+
+                <!-- USB CHARGING -->
 
                 <div class="booking-benefit">
 
                     <i class="fa-solid fa-plug"></i>
 
                     <div>
+
                         <h3>USB Charging</h3>
-                        <p>Keep your devices powered.</p>
+
+                        <p>
+                            Keep your devices powered.
+                        </p>
+
                     </div>
 
                 </div>
 
+
+                <!-- VEHICLES -->
 
                 <div class="booking-benefit">
 
                     <i class="fa-solid fa-van-shuttle"></i>
 
                     <div>
+
                         <h3>Comfortable Vehicles</h3>
-                        <p>Travel in our comfortable 7-seater vehicles.</p>
+
+                        <p>
+                            Travel in our comfortable 7-seater vehicles.
+                        </p>
+
                     </div>
 
                 </div>
 
+
+                <!-- ROUTES -->
 
                 <div class="booking-benefit">
 
                     <i class="fa-solid fa-route"></i>
 
                     <div>
+
                         <h3>Our Main Corridor</h3>
-                        <p>Nairobi ↔ Narok ↔ Bomet.</p>
+
+                        <p>
+                            Nairobi ↔ Narok ↔ Bomet.
+                        </p>
+
                     </div>
 
                 </div>
 
 
+                <!-- WHATSAPP SIDEBAR LINK -->
+
                 <div class="sidebar-contact">
 
-                    <p>Need assistance with your booking?</p>
+                    <p>
+                        Need assistance with your booking?
+                    </p>
 
-                    <a href="https://wa.me/2547XXXXXXXX"
-                       target="_blank"
-                       rel="noopener noreferrer">
+                    <a
+                        href="https://wa.me/254764774570?text=Hello%20Praline%20Travelers,%20I%20need%20assistance%20with%20a%20booking."
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
 
                         <i class="fa-brands fa-whatsapp"></i>
+
                         Chat with us
 
                     </a>
@@ -158,7 +220,9 @@
 
 
 
-            <!-- BOOKING FORM -->
+            <!-- =================================
+                 BOOKING FORM
+            ================================== -->
 
             <section class="booking-form-card">
 
@@ -184,35 +248,48 @@
                     ================================== -->
 
                     <h3 class="form-section-title">
+
                         <i class="fa-regular fa-user"></i>
+
                         Customer Information
+
                     </h3>
 
 
+                    <!-- FULL NAME -->
+
                     <div class="form-group">
 
-                        <label for="fullName">Full Name</label>
+                        <label for="fullName">
+                            Full Name
+                        </label>
 
                         <input
                             type="text"
                             id="fullName"
                             name="fullName"
                             placeholder="Enter your full name"
+                            autocomplete="name"
                             required
                         >
 
                     </div>
 
 
+                    <!-- PHONE NUMBER -->
+
                     <div class="form-group">
 
-                        <label for="phoneNumber">Phone Number</label>
+                        <label for="phoneNumber">
+                            Phone Number
+                        </label>
 
                         <input
                             type="tel"
                             id="phoneNumber"
                             name="phoneNumber"
                             placeholder="e.g. 0712345678"
+                            autocomplete="tel"
                             required
                         >
 
@@ -225,14 +302,19 @@
                     ================================== -->
 
                     <h3 class="form-section-title">
+
                         <i class="fa-solid fa-list-check"></i>
+
                         Choose Your Service
+
                     </h3>
 
 
                     <div class="form-group">
 
-                        <label for="serviceType">Choose a Service</label>
+                        <label for="serviceType">
+                            Choose a Service
+                        </label>
 
                         <select
                             id="serviceType"
@@ -240,7 +322,9 @@
                             required
                         >
 
-                            <option value="">Select a service</option>
+                            <option value="">
+                                Select a service
+                            </option>
 
                             <option value="shuttle">
                                 Premium Shuttle Service
@@ -267,27 +351,40 @@
                     <div id="travelFields">
 
                         <h3 class="form-section-title">
+
                             <i class="fa-solid fa-route"></i>
+
                             Travel Details
+
                         </h3>
 
+
+                        <!-- DEPARTURE AND DESTINATION -->
 
                         <div class="form-row">
 
                             <div class="form-group">
 
-                                <label for="departure">Departure</label>
+                                <label for="departure">
+                                    Departure
+                                </label>
 
                                 <select
                                     id="departure"
                                     name="departure"
                                 >
 
-                                    <option value="">Select departure</option>
+                                    <option value="">
+                                        Select departure
+                                    </option>
 
-                                    <option value="Nairobi">Nairobi</option>
+                                    <option value="Nairobi">
+                                        Nairobi
+                                    </option>
 
-                                    <option value="Bomet">Bomet</option>
+                                    <option value="Bomet">
+                                        Bomet
+                                    </option>
 
                                 </select>
 
@@ -296,14 +393,18 @@
 
                             <div class="form-group">
 
-                                <label for="destination">Destination</label>
+                                <label for="destination">
+                                    Destination
+                                </label>
 
                                 <select
                                     id="destination"
                                     name="destination"
                                 >
 
-                                    <option value="">Select destination</option>
+                                    <option value="">
+                                        Select destination
+                                    </option>
 
                                 </select>
 
@@ -312,9 +413,13 @@
                         </div>
 
 
+                        <!-- TRAVEL DATE -->
+
                         <div class="form-group">
 
-                            <label for="travelDate">Travel Date</label>
+                            <label for="travelDate">
+                                Travel Date
+                            </label>
 
                             <input
                                 type="date"
@@ -325,22 +430,49 @@
                         </div>
 
 
-                        <div class="form-group" id="passengerGroup">
+                        <!-- NUMBER OF PASSENGERS -->
 
-                            <label for="passengers">Number of Seats</label>
+                        <div
+                            class="form-group"
+                            id="passengerGroup"
+                        >
+
+                            <label for="passengers">
+                                Number of Seats
+                            </label>
 
                             <select
                                 id="passengers"
                                 name="passengers"
                             >
 
-                                <option value="1">1 Passenger</option>
-                                <option value="2">2 Passengers</option>
-                                <option value="3">3 Passengers</option>
-                                <option value="4">4 Passengers</option>
-                                <option value="5">5 Passengers</option>
-                                <option value="6">6 Passengers</option>
-                                <option value="7">7 Passengers</option>
+                                <option value="1">
+                                    1 Passenger
+                                </option>
+
+                                <option value="2">
+                                    2 Passengers
+                                </option>
+
+                                <option value="3">
+                                    3 Passengers
+                                </option>
+
+                                <option value="4">
+                                    4 Passengers
+                                </option>
+
+                                <option value="5">
+                                    5 Passengers
+                                </option>
+
+                                <option value="6">
+                                    6 Passengers
+                                </option>
+
+                                <option value="7">
+                                    7 Passengers
+                                </option>
 
                             </select>
 
@@ -357,10 +489,15 @@
                     <div id="parcelFields" hidden>
 
                         <h3 class="form-section-title">
+
                             <i class="fa-solid fa-box"></i>
+
                             Parcel Information
+
                         </h3>
 
+
+                        <!-- RECIPIENT NAME -->
 
                         <div class="form-group">
 
@@ -378,6 +515,8 @@
                         </div>
 
 
+                        <!-- RECIPIENT PHONE -->
+
                         <div class="form-group">
 
                             <label for="recipientPhone">
@@ -394,6 +533,8 @@
                         </div>
 
 
+                        <!-- PICKUP AND DELIVERY LOCATIONS -->
+
                         <div class="form-row">
 
                             <div class="form-group">
@@ -407,17 +548,29 @@
                                     name="parcelPickup"
                                 >
 
-                                    <option value="">Select pickup</option>
+                                    <option value="">
+                                        Select pickup
+                                    </option>
 
-                                    <option value="Nairobi">Nairobi</option>
+                                    <option value="Nairobi">
+                                        Nairobi
+                                    </option>
 
-                                    <option value="Bomet">Bomet</option>
+                                    <option value="Bomet">
+                                        Bomet
+                                    </option>
 
-                                    <option value="Kaplong">Kaplong</option>
+                                    <option value="Kaplong">
+                                        Kaplong
+                                    </option>
 
-                                    <option value="Litein">Litein</option>
+                                    <option value="Litein">
+                                        Litein
+                                    </option>
 
-                                    <option value="Chebole">Chebole</option>
+                                    <option value="Chebole">
+                                        Chebole
+                                    </option>
 
                                 </select>
 
@@ -435,17 +588,29 @@
                                     name="parcelDestination"
                                 >
 
-                                    <option value="">Select destination</option>
+                                    <option value="">
+                                        Select destination
+                                    </option>
 
-                                    <option value="Nairobi">Nairobi</option>
+                                    <option value="Nairobi">
+                                        Nairobi
+                                    </option>
 
-                                    <option value="Bomet">Bomet</option>
+                                    <option value="Bomet">
+                                        Bomet
+                                    </option>
 
-                                    <option value="Kaplong">Kaplong</option>
+                                    <option value="Kaplong">
+                                        Kaplong
+                                    </option>
 
-                                    <option value="Litein">Litein</option>
+                                    <option value="Litein">
+                                        Litein
+                                    </option>
 
-                                    <option value="Chebole">Chebole</option>
+                                    <option value="Chebole">
+                                        Chebole
+                                    </option>
 
                                 </select>
 
@@ -453,6 +618,8 @@
 
                         </div>
 
+
+                        <!-- PARCEL DESCRIPTION -->
 
                         <div class="form-group">
 
@@ -470,6 +637,8 @@
                         </div>
 
 
+                        <!-- DELIVERY DATE -->
+
                         <div class="form-group">
 
                             <label for="parcelDate">
@@ -484,11 +653,17 @@
 
                         </div>
 
+
+                        <!-- PARCEL NOTICE -->
+
                         <p class="parcel-notice">
+
                             <i class="fa-solid fa-circle-info"></i>
+
                             Parcel delivery charges depend on the
                             parcel and delivery location. Our team
                             will contact you with a quotation.
+
                         </p>
 
                     </div>
@@ -499,7 +674,10 @@
                          FARE SUMMARY
                     ================================== -->
 
-                    <div class="fare-summary" id="fareSummary">
+                    <div
+                        class="fare-summary"
+                        id="fareSummary"
+                    >
 
                         <div>
 
@@ -526,8 +704,11 @@
                     <div class="form-group">
 
                         <label for="message">
+
                             Additional Information
+
                             <span>(Optional)</span>
+
                         </label>
 
                         <textarea
@@ -557,11 +738,15 @@
                     </button>
 
 
+                    <!-- BOOKING FEEDBACK -->
+
                     <div
                         id="bookingFeedback"
                         aria-live="polite"
                     ></div>
 
+
+                    <!-- DISCLAIMER -->
 
                     <p class="form-disclaimer">
 
@@ -602,7 +787,9 @@
 
                 </a>
 
-                <p>Your journey, our priority.</p>
+                <p>
+                    Your journey, our priority.
+                </p>
 
                 <p class="footer-description">
 
@@ -626,8 +813,10 @@
                 </p>
 
 
+                <!-- WHATSAPP LINK -->
+
                 <a
-                    href="https://wa.me/2547XXXXXXXX"
+                    href="https://wa.me/254764774570?text=Hello%20Praline%20Travelers,%20I%20need%20assistance%20with%20a%20booking."
                     class="whatsapp-btn"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -640,14 +829,16 @@
                 </a>
 
 
+                <!-- PHONE LINK -->
+
                 <a
-                    href="tel:+2547XXXXXXXX"
+                    href="tel:+254764774570"
                     class="call-btn"
                 >
 
                     <i class="fa-solid fa-phone"></i>
 
-                    Call Us: +254 7XX XXX XXX
+                    Call Us: 0764774570
 
                 </a>
 

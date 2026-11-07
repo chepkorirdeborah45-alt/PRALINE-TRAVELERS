@@ -905,3 +905,269 @@ a {
 .bomet-image {
     background-image: url("../images/bomet-location.jpg");
 }
+
+/* =========================================
+   PRALINE TRAVELERS
+   CONTACT SECTION
+========================================= */
+
+.contact-section {
+    width: 100%;
+    padding: 90px 8%;
+    background-color: var(--ivory);
+}
+
+/* SECTION HEADING */
+
+.contact-section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.contact-section-heading span {
+    color: var(--emerald);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.contact-section-heading h2 {
+    color: var(--emerald);
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.contact-section-heading p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* MAIN CONTACT LAYOUT */
+
+.contact-form-section {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+
+/* LEFT INFORMATION */
+
+.contact-form-info {
+    background-color: var(--emerald);
+    color: var(--ivory);
+    padding: 45px 35px;
+    border-radius: 8px;
+}
+
+.contact-form-info > span {
+    color: var(--champagne);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.contact-form-info h2 {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.contact-form-info > p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+
+/* WHATSAPP BUTTON */
+
+.contact-whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 18px;
+    margin-bottom: 30px;
+    background-color: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.contact-whatsapp-btn i {
+    font-size: 19px;
+}
+
+.contact-whatsapp-btn:hover {
+    background-color: #1da851;
+    transform: translateY(-3px);
+}
+
+
+/* CONTACT BENEFITS */
+
+.contact-form-benefit {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.contact-form-benefit i {
+    color: var(--champagne);
+    font-size: 17px;
+}
+
+.contact-form-benefit span {
+    font-size: 14px;
+}
+
+
+/* FORM WRAPPER */
+
+.contact-form-wrapper {
+    width: 100%;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+}
+
+
+/* INPUT ROW */
+
+.contact-input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+
+/* INPUT GROUP */
+
+.contact-input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.contact-input-group label {
+    color: var(--emerald);
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.contact-input-group input,
+.contact-input-group select,
+.contact-input-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fafafa;
+    color: #333;
+    font-family: inherit;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.contact-input-group input:focus,
+.contact-input-group select:focus,
+.contact-input-group textarea:focus {
+    border-color: var(--emerald);
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(24, 60, 53, 0.08);
+}
+
+.contact-input-group textarea {
+    resize: vertical;
+}
+
+
+/* SUBMIT BUTTON */
+
+.contact-submit-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--emerald);
+    color: var(--ivory);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact-submit-btn:hover {
+    background-color: #24564c;
+    transform: translateY(-2px);
+}
+
+
+/* FEEDBACK */
+
+#contactFeedback {
+    margin-top: 15px;
+    font-size: 13px;
+    text-align: center;
+    color: var(--emerald);
+}
+
+
+/* TABLET RESPONSIVENESS */
+
+@media (max-width: 900px) {
+
+    .contact-form-section {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .contact-section {
+        padding: 65px 6%;
+    }
+
+    .contact-section-heading h2 {
+        font-size: 27px;
+    }
+
+    .contact-form-info {
+        padding: 35px 25px;
+    }
+
+    .contact-form-info h2 {
+        font-size: 25px;
+    }
+
+    .contact-form-wrapper {
+        padding: 25px 18px;
+    }
+
+    .contact-input-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+}

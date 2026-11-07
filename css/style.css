@@ -2047,3 +2047,198 @@ body {
     }
 
 }
+
+/* =========================================
+   PRALINE TRAVELERS FOOTER
+========================================= */
+
+.footer {
+    width: 100%;
+    background-color: var(--emerald);
+    color: var(--ivory);
+    padding: 70px 8% 0;
+    border-top: 3px solid var(--champagne);
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.2fr 1fr;
+    gap: 45px;
+    padding-bottom: 55px;
+}
+
+/* FOOTER COLUMNS */
+
+.footer-column h3 {
+    color: var(--champagne);
+    font-size: 16px;
+    margin-bottom: 23px;
+    letter-spacing: 1px;
+}
+
+.footer-column p {
+    font-size: 13px;
+    line-height: 1.9;
+    color: rgba(244, 240, 232, 0.8);
+}
+
+/* FOOTER LOGO */
+
+.footer-logo {
+    display: inline-flex;
+    flex-direction: column;
+    color: var(--ivory);
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.footer-logo span {
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: var(--champagne);
+}
+
+/* QUICK LINKS */
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 13px;
+}
+
+.footer-column ul a {
+    color: rgba(244, 240, 232, 0.8);
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.3s ease;
+}
+
+.footer-column ul a:hover {
+    color: var(--champagne);
+    padding-left: 6px;
+}
+
+/* LOCATIONS */
+
+.footer-location {
+    margin-bottom: 20px;
+}
+
+.footer-location strong {
+    display: block;
+    color: var(--ivory);
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.footer-location p {
+    margin-bottom: 3px;
+}
+
+.footer-location small {
+    color: var(--champagne);
+    font-size: 11px;
+}
+
+/* DOWNLOAD BUTTON */
+
+.footer-download,
+.footer-book {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    width: fit-content;
+    padding: 12px 18px;
+    margin-top: 18px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.footer-download {
+    background-color: var(--champagne);
+    color: var(--emerald);
+}
+
+.footer-download:hover {
+    background-color: var(--ivory);
+    transform: translateY(-3px);
+}
+
+.footer-book {
+    border: 1px solid var(--champagne);
+    color: var(--champagne);
+}
+
+.footer-book:hover {
+    background-color: var(--champagne);
+    color: var(--emerald);
+}
+
+/* FOOTER BOTTOM */
+
+.footer-bottom {
+    max-width: 1400px;
+    margin: auto;
+    border-top: 1px solid rgba(214, 195, 165, 0.3);
+    padding: 23px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-bottom p {
+    font-size: 11px;
+    color: rgba(244, 240, 232, 0.7);
+}
+
+.footer-bottom span {
+    color: var(--champagne);
+    padding: 0 5px;
+}
+
+/* TABLET RESPONSIVENESS */
+
+@media (max-width: 1000px) {
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding: 55px 7% 0;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding-bottom: 40px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+}
