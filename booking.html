@@ -1,0 +1,676 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book a Seat | Praline Travelers</title>
+
+    <!-- Booking page stylesheet -->
+    <link rel="stylesheet" href="./css/booking.css">
+
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Booking JavaScript -->
+    <script src="./js/booking.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =================================
+         HEADER
+    ================================== -->
+
+    <header class="booking-header">
+
+        <a href="index.html" class="booking-logo">
+            <span>PRALINE</span>
+            <small>TRAVELERS</small>
+        </a>
+
+        <a href="index.html" class="back-home">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Home
+        </a>
+
+    </header>
+
+
+    <!-- =================================
+         BOOKING HERO
+    ================================== -->
+
+    <section class="booking-hero">
+
+        <div class="booking-hero-overlay"></div>
+
+        <div class="booking-hero-content">
+
+            <span>TRAVEL WITH CONFIDENCE</span>
+
+            <h1>Your Journey.<br>Your Seat. Your Way.</h1>
+
+            <p>
+                Reserve your seat with Praline Travelers
+                and enjoy a comfortable journey between
+                Nairobi, Bomet and connecting towns.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         BOOKING SECTION
+    ================================== -->
+
+    <main class="booking-section">
+
+        <div class="booking-container">
+
+
+            <!-- LEFT INFORMATION PANEL -->
+
+            <aside class="booking-sidebar">
+
+                <span class="sidebar-label">
+                    WHY CHOOSE PRALINE?
+                </span>
+
+                <h2>Every Journey Deserves Comfort.</h2>
+
+                <p>
+                    Travel with confidence aboard Praline Travelers.
+                    We make your journey convenient, comfortable
+                    and reliable.
+                </p>
+
+
+                <div class="booking-benefit">
+
+                    <i class="fa-solid fa-wifi"></i>
+
+                    <div>
+                        <h3>Onboard Wi-Fi</h3>
+                        <p>Stay connected during your journey.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="booking-benefit">
+
+                    <i class="fa-solid fa-plug"></i>
+
+                    <div>
+                        <h3>USB Charging</h3>
+                        <p>Keep your devices powered.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="booking-benefit">
+
+                    <i class="fa-solid fa-van-shuttle"></i>
+
+                    <div>
+                        <h3>Comfortable Vehicles</h3>
+                        <p>Travel in our comfortable 7-seater vehicles.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="booking-benefit">
+
+                    <i class="fa-solid fa-route"></i>
+
+                    <div>
+                        <h3>Our Main Corridor</h3>
+                        <p>Nairobi ↔ Narok ↔ Bomet.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="sidebar-contact">
+
+                    <p>Need assistance with your booking?</p>
+
+                    <a href="https://wa.me/2547XXXXXXXX"
+                       target="_blank"
+                       rel="noopener noreferrer">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Chat with us
+
+                    </a>
+
+                </div>
+
+            </aside>
+
+
+
+            <!-- BOOKING FORM -->
+
+            <section class="booking-form-card">
+
+                <div class="form-heading">
+
+                    <span>RESERVATION & DELIVERY</span>
+
+                    <h2>Book Your Service</h2>
+
+                    <p>
+                        Select the service you need and provide
+                        the necessary details below.
+                    </p>
+
+                </div>
+
+
+                <form id="bookingForm">
+
+
+                    <!-- =================================
+                         CUSTOMER INFORMATION
+                    ================================== -->
+
+                    <h3 class="form-section-title">
+                        <i class="fa-regular fa-user"></i>
+                        Customer Information
+                    </h3>
+
+
+                    <div class="form-group">
+
+                        <label for="fullName">Full Name</label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="phoneNumber">Phone Number</label>
+
+                        <input
+                            type="tel"
+                            id="phoneNumber"
+                            name="phoneNumber"
+                            placeholder="e.g. 0712345678"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         SERVICE SELECTION
+                    ================================== -->
+
+                    <h3 class="form-section-title">
+                        <i class="fa-solid fa-list-check"></i>
+                        Choose Your Service
+                    </h3>
+
+
+                    <div class="form-group">
+
+                        <label for="serviceType">Choose a Service</label>
+
+                        <select
+                            id="serviceType"
+                            name="serviceType"
+                            required
+                        >
+
+                            <option value="">Select a service</option>
+
+                            <option value="shuttle">
+                                Premium Shuttle Service
+                            </option>
+
+                            <option value="charter">
+                                Full-Vehicle Private Charter
+                            </option>
+
+                            <option value="parcel">
+                                Courier & Parcel Delivery
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         SHUTTLE / CHARTER DETAILS
+                    ================================== -->
+
+                    <div id="travelFields">
+
+                        <h3 class="form-section-title">
+                            <i class="fa-solid fa-route"></i>
+                            Travel Details
+                        </h3>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="departure">Departure</label>
+
+                                <select
+                                    id="departure"
+                                    name="departure"
+                                >
+
+                                    <option value="">Select departure</option>
+
+                                    <option value="Nairobi">Nairobi</option>
+
+                                    <option value="Bomet">Bomet</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="destination">Destination</label>
+
+                                <select
+                                    id="destination"
+                                    name="destination"
+                                >
+
+                                    <option value="">Select destination</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="travelDate">Travel Date</label>
+
+                            <input
+                                type="date"
+                                id="travelDate"
+                                name="travelDate"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group" id="passengerGroup">
+
+                            <label for="passengers">Number of Seats</label>
+
+                            <select
+                                id="passengers"
+                                name="passengers"
+                            >
+
+                                <option value="1">1 Passenger</option>
+                                <option value="2">2 Passengers</option>
+                                <option value="3">3 Passengers</option>
+                                <option value="4">4 Passengers</option>
+                                <option value="5">5 Passengers</option>
+                                <option value="6">6 Passengers</option>
+                                <option value="7">7 Passengers</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         PARCEL DELIVERY DETAILS
+                    ================================== -->
+
+                    <div id="parcelFields" hidden>
+
+                        <h3 class="form-section-title">
+                            <i class="fa-solid fa-box"></i>
+                            Parcel Information
+                        </h3>
+
+
+                        <div class="form-group">
+
+                            <label for="recipientName">
+                                Recipient's Full Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="recipientName"
+                                name="recipientName"
+                                placeholder="Enter recipient's name"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="recipientPhone">
+                                Recipient's Phone Number
+                            </label>
+
+                            <input
+                                type="tel"
+                                id="recipientPhone"
+                                name="recipientPhone"
+                                placeholder="e.g. 0712345678"
+                            >
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+
+                                <label for="parcelPickup">
+                                    Pickup Location
+                                </label>
+
+                                <select
+                                    id="parcelPickup"
+                                    name="parcelPickup"
+                                >
+
+                                    <option value="">Select pickup</option>
+
+                                    <option value="Nairobi">Nairobi</option>
+
+                                    <option value="Bomet">Bomet</option>
+
+                                    <option value="Kaplong">Kaplong</option>
+
+                                    <option value="Litein">Litein</option>
+
+                                    <option value="Chebole">Chebole</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="parcelDestination">
+                                    Delivery Location
+                                </label>
+
+                                <select
+                                    id="parcelDestination"
+                                    name="parcelDestination"
+                                >
+
+                                    <option value="">Select destination</option>
+
+                                    <option value="Nairobi">Nairobi</option>
+
+                                    <option value="Bomet">Bomet</option>
+
+                                    <option value="Kaplong">Kaplong</option>
+
+                                    <option value="Litein">Litein</option>
+
+                                    <option value="Chebole">Chebole</option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="parcelDescription">
+                                Parcel Description
+                            </label>
+
+                            <textarea
+                                id="parcelDescription"
+                                name="parcelDescription"
+                                rows="4"
+                                placeholder="Describe the parcel you want to send..."
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="parcelDate">
+                                Preferred Delivery Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="parcelDate"
+                                name="parcelDate"
+                            >
+
+                        </div>
+
+                        <p class="parcel-notice">
+                            <i class="fa-solid fa-circle-info"></i>
+                            Parcel delivery charges depend on the
+                            parcel and delivery location. Our team
+                            will contact you with a quotation.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         FARE SUMMARY
+                    ================================== -->
+
+                    <div class="fare-summary" id="fareSummary">
+
+                        <div>
+
+                            <span>Estimated Fare</span>
+
+                            <h3 id="fareAmount">
+                                Select a Service
+                            </h3>
+
+                        </div>
+
+                        <p id="fareNote">
+                            Choose a service to see the estimated fare.
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         ADDITIONAL INFORMATION
+                    ================================== -->
+
+                    <div class="form-group">
+
+                        <label for="message">
+                            Additional Information
+                            <span>(Optional)</span>
+                        </label>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="4"
+                            placeholder="Any special requests or additional information?"
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <!-- =================================
+                         SUBMIT BUTTON
+                    ================================== -->
+
+                    <button
+                        type="submit"
+                        class="submit-booking-btn"
+                    >
+
+                        Submit Request
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                    <div
+                        id="bookingFeedback"
+                        aria-live="polite"
+                    ></div>
+
+
+                    <p class="form-disclaimer">
+
+                        This is a service request, not a confirmed
+                        reservation or parcel delivery. Our team will
+                        contact you to confirm availability and pricing.
+
+                    </p>
+
+                </form>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =================================
+         FOOTER
+    ================================== -->
+
+    <footer class="booking-footer">
+
+        <div class="footer-content">
+
+
+            <!-- FOOTER BRAND -->
+
+            <div class="footer-brand">
+
+                <a href="index.html" class="footer-logo">
+
+                    PRALINE
+
+                    <span>TRAVELERS</span>
+
+                </a>
+
+                <p>Your journey, our priority.</p>
+
+                <p class="footer-description">
+
+                    Connecting Nairobi, Bomet and the communities
+                    along our travel corridor.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- FOOTER CONTACT -->
+
+            <div class="footer-contact">
+
+                <h3>Need Assistance?</h3>
+
+                <p>
+                    Our team is ready to help with your journey.
+                </p>
+
+
+                <a
+                    href="https://wa.me/2547XXXXXXXX"
+                    class="whatsapp-btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    Contact Us on WhatsApp
+
+                </a>
+
+
+                <a
+                    href="tel:+2547XXXXXXXX"
+                    class="call-btn"
+                >
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    Call Us: +254 7XX XXX XXX
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 Praline Travelers.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
