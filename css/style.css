@@ -37,8 +37,6 @@ body {
     background-color: var(--ivory);
     font-family: 'Montserrat', Arial, sans-serif;
     color: var(--charcoal);
-
-    /* Space for fixed navbar */
     padding-top: 85px;
 }
 
@@ -49,15 +47,12 @@ body {
 
 .header {
     width: 100%;
-
     position: fixed;
     top: 0;
     left: 0;
-
     z-index: 1000;
 
     background-color: var(--emerald);
-
     border-bottom: 2px solid var(--champagne);
 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
@@ -71,7 +66,6 @@ body {
 .navbar {
     width: 100%;
     max-width: 1400px;
-
     min-height: 85px;
 
     margin: auto;
@@ -80,6 +74,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    position: relative;
+    gap: 15px;
 }
 
 
@@ -89,24 +86,22 @@ body {
 
 .logo {
     text-decoration: none;
-
     color: var(--ivory);
 
     font-size: 24px;
     font-weight: 800;
-
     letter-spacing: 2px;
     line-height: 1.2;
+
+    flex-shrink: 0;
 }
 
 .logo span {
     display: block;
-
     color: var(--champagne);
 
     font-size: 11px;
     letter-spacing: 5px;
-
     margin-top: 4px;
 }
 
@@ -118,7 +113,6 @@ body {
 .nav-links {
     display: flex;
     align-items: center;
-
     gap: 28px;
 
     list-style: none;
@@ -126,11 +120,9 @@ body {
 
 .nav-links a {
     position: relative;
-
     display: inline-block;
 
     text-decoration: none;
-
     color: var(--ivory);
 
     font-size: 14px;
@@ -148,7 +140,6 @@ body {
     content: "";
 
     position: absolute;
-
     left: 0;
     bottom: 0;
 
@@ -175,7 +166,7 @@ body {
 }
 
 
-/* Active navigation link */
+/* Active link */
 
 .nav-links a.active {
     color: var(--champagne);
@@ -191,6 +182,8 @@ body {
 ========================================= */
 
 .book-btn {
+    flex-shrink: 0;
+
     text-decoration: none;
 
     background-color: var(--champagne);
@@ -216,7 +209,58 @@ body {
 
 
 /* =========================================
-   8. HAMBURGER BUTTON
+   8. DOWNLOAD APP BUTTON
+========================================= */
+
+.download-app {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 11px 15px;
+
+    background-color: var(--champagne);
+    color: var(--emerald);
+
+    border: 1px solid var(--champagne);
+    border-radius: 5px;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+
+    white-space: nowrap;
+    flex-shrink: 0;
+
+    /* Space between neighboring elements */
+    margin-left: 12px;
+    margin-right: 12px;
+
+    transition: all 0.3s ease;
+}
+
+.download-app i {
+    font-size: 14px;
+}
+
+.download-app:hover {
+    background-color: transparent;
+    color: var(--champagne);
+
+    border-color: var(--champagne);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 4px 12px rgba(214, 195, 165, 0.2);
+}
+
+
+/* =========================================
+   9. HAMBURGER BUTTON
 ========================================= */
 
 .menu-toggle {
@@ -240,7 +284,6 @@ body {
     height: 3px;
 
     background-color: var(--champagne);
-
     border-radius: 3px;
 
     transition: all 0.3s ease;
@@ -248,7 +291,7 @@ body {
 
 
 /* =========================================
-   9. MOBILE BOOKING BUTTON
+   10. MOBILE BOOKING BUTTON
 ========================================= */
 
 .mobile-booking {
@@ -257,7 +300,42 @@ body {
 
 
 /* =========================================
-   10. RESPONSIVE NAVIGATION
+   11. RESPONSIVE NAVIGATION
+========================================= */
+
+@media (max-width: 1100px) and (min-width: 901px) {
+
+    .navbar {
+        gap: 8px;
+        padding: 0 3%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .download-app {
+        margin-left: 4px;
+        margin-right: 4px;
+
+        padding: 10px 9px;
+        font-size: 10px;
+        gap: 5px;
+    }
+
+    .book-btn {
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================
+   12. MOBILE NAVIGATION
 ========================================= */
 
 @media (max-width: 900px) {
@@ -268,8 +346,8 @@ body {
 
     .navbar {
         min-height: 75px;
+        gap: 5px;
     }
-
 
     /* Hide desktop booking button */
 
@@ -277,14 +355,37 @@ body {
         display: none;
     }
 
-
     /* Show hamburger */
 
     .menu-toggle {
         display: flex;
+        flex-shrink: 0;
         z-index: 1002;
     }
 
+    /* Mobile download button */
+
+    .download-app {
+        position: static;
+
+        margin-left: auto;
+        margin-right: 5px;
+
+        padding: 9px 11px;
+
+        font-size: 10px;
+        gap: 6px;
+
+        transform: none;
+    }
+
+    .download-app i {
+        font-size: 12px;
+    }
+
+    .download-app:hover {
+        transform: none;
+    }
 
     /* Mobile navigation menu */
 
@@ -318,7 +419,6 @@ body {
         transition: all 0.3s ease;
     }
 
-
     /* Show menu when active */
 
     .nav-links.active {
@@ -329,7 +429,6 @@ body {
 
         transform: translateY(0);
     }
-
 
     /* Mobile navigation items */
 
@@ -350,7 +449,6 @@ body {
         bottom: 8px;
     }
 
-
     /* Mobile booking link */
 
     .mobile-booking {
@@ -361,7 +459,6 @@ body {
         color: var(--champagne);
         font-weight: 700;
     }
-
 
     /* Hamburger animation */
 
@@ -380,8 +477,40 @@ body {
 }
 
 
+/* Very small phones */
+
+@media (max-width: 380px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .logo span {
+        font-size: 9px;
+        letter-spacing: 4px;
+    }
+
+    .download-app {
+        padding: 8px 8px;
+        margin-right: 2px;
+
+        font-size: 9px;
+        gap: 4px;
+    }
+
+    .download-app i {
+        font-size: 11px;
+    }
+
+}
+
+
 /* =========================================
-   11. TEMPORARY HOME SECTION
+   13. TEMPORARY HOME SECTION
 ========================================= */
 
 .home {
@@ -400,21 +529,18 @@ body {
 
 .home h1 {
     color: var(--emerald);
-
     font-size: clamp(28px, 5vw, 50px);
-
     margin-bottom: 15px;
 }
 
 .home p {
     color: var(--charcoal);
-
     font-size: 16px;
 }
 
 
 /* =========================================
-   12. ACCESSIBILITY
+   14. ACCESSIBILITY
 ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -428,12 +554,14 @@ body {
 
 }
 
+
 /* =========================================
-   12. PRALINE TRAVELERS HERO SECTION
+   15. HERO SECTION
 ========================================= */
 
 .hero {
     width: 100%;
+
     min-height: 650px;
     min-height: calc(100vh - 85px);
 
@@ -446,7 +574,6 @@ body {
 
     overflow: hidden;
 
-    /* YOUR VEHICLE BACKGROUND IMAGE */
     background-image: url("../images/praline-vehicle.jpg");
 
     background-size: cover;
@@ -456,7 +583,7 @@ body {
 
 
 /* =========================================
-   13. DARK IMAGE OVERLAY
+   16. DARK IMAGE OVERLAY
 ========================================= */
 
 .hero-overlay {
@@ -476,7 +603,7 @@ body {
 
 
 /* =========================================
-   14. HERO CONTENT
+   17. HERO CONTENT
 ========================================= */
 
 .hero-content {
@@ -488,9 +615,6 @@ body {
 
     color: var(--ivory);
 }
-
-
-/* Small introductory text */
 
 .hero-subtitle {
     display: inline-block;
@@ -505,14 +629,10 @@ body {
     margin-bottom: 25px;
 }
 
-
-/* Main heading */
-
 .hero-content h1 {
     font-size: clamp(38px, 5.5vw, 68px);
 
     font-weight: 800;
-
     line-height: 1.15;
 
     margin-bottom: 22px;
@@ -523,9 +643,6 @@ body {
 .hero-content h1 span {
     color: var(--champagne);
 }
-
-
-/* Hero description */
 
 .hero-description {
     max-width: 580px;
@@ -540,7 +657,7 @@ body {
 
 
 /* =========================================
-   15. ROUTE INFORMATION
+   18. ROUTE INFORMATION
 ========================================= */
 
 .hero-route {
@@ -580,7 +697,6 @@ body {
     color: var(--ivory);
 
     font-size: 20px;
-
     letter-spacing: 2px;
 
     margin-bottom: 5px;
@@ -588,19 +704,17 @@ body {
 
 .route-location p {
     color: var(--ivory);
-
     font-size: 12px;
 }
 
 .route-divider {
     color: var(--champagne);
-
     font-size: 30px;
 }
 
 
 /* =========================================
-   16. PICKUP DETAILS
+   19. PICKUP DETAILS
 ========================================= */
 
 .pickup-details {
@@ -621,7 +735,6 @@ body {
 
 .pickup-icon {
     color: var(--champagne);
-
     font-size: 20px;
 }
 
@@ -629,7 +742,6 @@ body {
     display: block;
 
     color: var(--champagne);
-
     font-size: 13px;
 
     margin-bottom: 5px;
@@ -654,7 +766,7 @@ body {
 
 
 /* =========================================
-   17. HERO BUTTONS
+   20. HERO BUTTONS
 ========================================= */
 
 .hero-buttons {
@@ -662,7 +774,6 @@ body {
     align-items: center;
 
     flex-wrap: wrap;
-
     gap: 15px;
 }
 
@@ -685,12 +796,10 @@ body {
     transition: all 0.3s ease;
 }
 
-
 /* Primary button */
 
 .primary-btn {
     background-color: var(--champagne);
-
     color: var(--emerald);
 
     border: 1px solid var(--champagne);
@@ -698,30 +807,26 @@ body {
 
 .primary-btn:hover {
     background-color: var(--ivory);
-
     border-color: var(--ivory);
 
     transform: translateY(-3px);
 }
 
-
 /* Secondary button */
 
 .secondary-btn {
     color: var(--ivory);
-
     border: 1px solid var(--champagne);
 }
 
 .secondary-btn:hover {
     background-color: var(--champagne);
-
     color: var(--emerald);
 }
 
 
 /* =========================================
-   18. HERO BOTTOM LABEL
+   21. HERO BOTTOM LABEL
 ========================================= */
 
 .hero-bottom {
@@ -742,13 +847,12 @@ body {
 
 .hero-bottom span {
     margin-left: 10px;
-
     color: var(--ivory);
 }
 
 
 /* =========================================
-   19. TABLET RESPONSIVENESS
+   22. TABLET HERO RESPONSIVENESS
 ========================================= */
 
 @media (max-width: 900px) {
@@ -777,7 +881,7 @@ body {
 
 
 /* =========================================
-   20. MOBILE RESPONSIVENESS
+   23. MOBILE HERO RESPONSIVENESS
 ========================================= */
 
 @media (max-width: 600px) {
@@ -798,27 +902,22 @@ body {
 
     .hero-subtitle {
         font-size: 10px;
-
         letter-spacing: 3px;
-
         margin-bottom: 18px;
     }
 
     .hero-content h1 {
         font-size: clamp(34px, 9vw, 46px);
-
         line-height: 1.2;
     }
 
     .hero-description {
         font-size: 14px;
-
         line-height: 1.7;
     }
 
     .hero-route {
         gap: 12px;
-
         padding: 16px 12px;
     }
 
@@ -832,7 +931,6 @@ body {
 
     .route-label {
         font-size: 8px;
-
         letter-spacing: 0.5px;
     }
 
@@ -842,7 +940,6 @@ body {
 
     .pickup-details {
         flex-direction: column;
-
         gap: 18px;
     }
 
@@ -863,6 +960,309 @@ body {
 
         font-size: 9px;
         letter-spacing: 1.5px;
+    }
+
+}
+
+/* =========================================
+   PRALINE TRAVELERS
+   SERVICES SECTION
+========================================= */
+
+.services {
+    background: #F4F0E8;
+    padding: 100px 6%;
+}
+
+.services-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* SECTION HEADING */
+
+.services-heading {
+    max-width: 750px;
+    margin: 0 auto 65px;
+    text-align: center;
+}
+
+.section-subtitle {
+    display: inline-block;
+    color: #B49A73;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.services-heading h2 {
+    color: #183C35;
+    font-size: clamp(30px, 4vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.services-heading h2 span {
+    color: #B49A73;
+}
+
+.services-heading p {
+    color: #666D68;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* SERVICES GRID */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* SERVICE CARD */
+
+.service-card {
+    position: relative;
+    background: #FFFFFF;
+    padding: 35px 28px;
+    border: 1px solid rgba(24, 60, 53, 0.08);
+    border-radius: 12px;
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease,
+                border-color 0.35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: #D6C3A5;
+    box-shadow: 0 18px 40px rgba(24, 60, 53, 0.10);
+}
+
+
+/* FEATURED SERVICE */
+
+.featured-service {
+    border: 1px solid #D6C3A5;
+    background: #FBF9F4;
+}
+
+.featured-label {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #183C35;
+    background: #E9DDC9;
+    padding: 7px 12px;
+    border-radius: 30px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* SERVICE ICON */
+
+.service-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #183C35;
+    color: #D6C3A5;
+    border-radius: 10px;
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+
+.service-number {
+    display: block;
+    color: #B49A73;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+
+/* SERVICE TEXT */
+
+.service-card h3 {
+    color: #183C35;
+    font-size: 21px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.service-card > p {
+    color: #68706B;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+    min-height: 100px;
+}
+
+
+/* SERVICE FEATURES */
+
+.service-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+}
+
+.service-features li {
+    position: relative;
+    color: #454D48;
+    font-size: 13px;
+    line-height: 1.6;
+    padding-left: 22px;
+    margin-bottom: 12px;
+}
+
+.service-features li::before {
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: #B49A73;
+}
+
+
+/* SERVICE LINKS */
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #183C35;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    border-bottom: 1px solid #D6C3A5;
+    padding-bottom: 7px;
+    transition: color 0.3s ease;
+}
+
+.service-link span {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.service-link:hover {
+    color: #A78A60;
+}
+
+.service-link:hover span {
+    transform: translateX(5px);
+}
+
+
+/* BOTTOM CTA */
+
+.services-bottom {
+    margin-top: 60px;
+    padding: 35px 40px;
+    background: #183C35;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.services-bottom > div > span {
+    color: #D6C3A5;
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.services-bottom h3 {
+    color: #FFFFFF;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.services-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    background: #D6C3A5;
+    color: #183C35;
+    padding: 15px 23px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background 0.3s ease;
+}
+
+.services-cta:hover {
+    background: #FFFFFF;
+}
+
+
+/* =========================================
+   TABLET RESPONSIVENESS
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVENESS
+========================================= */
+
+@media (max-width: 650px) {
+
+    .services {
+        padding: 75px 5%;
+    }
+
+    .services-heading {
+        margin-bottom: 40px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 30px 24px;
+    }
+
+    .service-card > p {
+        min-height: auto;
+    }
+
+    .services-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 25px;
+    }
+
+    .services-bottom h3 {
+        font-size: 21px;
+    }
+
+    .services-cta {
+        width: 100%;
+        justify-content: center;
     }
 
 }
